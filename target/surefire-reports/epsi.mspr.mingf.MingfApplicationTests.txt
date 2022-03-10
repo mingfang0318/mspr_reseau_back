@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: epsi.mspr.mingf.MingfApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.087 s - in epsi.mspr.mingf.MingfApplicationTests
