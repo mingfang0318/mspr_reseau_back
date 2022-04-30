@@ -19,6 +19,11 @@ objectclass: top
 objectclass: organizationalUnit
 ou: people
 
+dn: ou=system,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: system
+
 dn: ou=space cadets,dc=springframework,dc=org
 objectclass: top
 objectclass: organizationalUnit
@@ -34,15 +39,40 @@ objectclass: top
 objectclass: organizationalUnit
 ou: otherpeople
 
+dn: uid=admin,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: system
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: ben.alex
+sn: alex
+uid: admin
+password: secret
+mobile: +33695881333
+
+dn: uid=john,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: user
+cn: John Doe
+sn: John
+uid: john
+userPrincipalName: uid=john,ou=people,dc=springframework,dc=org
+userPassword: johnspassword
+
 dn: uid=ben.alex,ou=people,dc=springframework,dc=org
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
+objectclass: user
 objectclass: inetOrgPerson
 cn: ben.alex
 sn: alex
 uid: ben.alex
 password: benspassword
+mobile: +33695881333
 
 dn: uid=bob.hamilton,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -53,6 +83,7 @@ cn: Bob Hamilton
 sn: Hamilton
 uid: bob.hamilton
 password: bobspassword
+mobile: +33695881333
 
 dn: uid=joe.smeth,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -63,6 +94,7 @@ cn: Joe Smeth
 sn: Smeth
 uid: joe.smeth
 password: joespassword
+mobile: +33695881333
 
 dn: cn=mouse\, jerry,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -119,10 +151,3 @@ cn: managers
 ou: manager
 uniqueMember: uid=ben,ou=people,dc=springframework,dc=org
 uniqueMember: cn=mouse\, jerry,ou=people,dc=springframework,dc=org
-
-dn: cn=submanagers,ou=subgroups,ou=groups,dc=springframework,dc=org
-objectclass: top
-objectclass: groupOfUniqueNames
-cn: submanagers
-ou: submanager
-uniqueMember: uid=ben,ou=people,dc=springframework,dc=org

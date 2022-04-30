@@ -10,9 +10,6 @@ public class LoginRequest {
 	@NotBlank
 	private String password;
 
-	@NotNull
-	private boolean mailConfirmed;
-
 	public String getUsername() {
 		return username;
 	}
@@ -27,13 +24,5 @@ public class LoginRequest {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public boolean getMailConfirmed() {
-		return mailConfirmed;
-	}
-
-	public void setMailConfirmed(boolean mailConfirmed) {
-		this.mailConfirmed = mailConfirmed;
 	}
 }
